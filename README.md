@@ -1,12 +1,14 @@
 # 📤 MailDeaf
 MailDeaf provides an abstract mail service.
 
-## Senders
+## MailSender
 
-The following senders are implemented right now.
+The following MailSender are implemented right now.
 
 ### **SendGrid**
 https://github.com/wildlabsio/maildeaf/tree/master/maildeaf-sender-sendgrid
+
+Feel free to implement your own MailSender. You only have to implement the MailSender interface.
 
 ## Authors
 **[Pascal Wild](https://github.com/pascalwild)**
