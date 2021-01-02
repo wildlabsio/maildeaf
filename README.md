@@ -1,5 +1,6 @@
 # 📤 MailDeaf
 ![maildeaf](https://github.com/wildlabsio/maildeaf/workflows/maildeaf/badge.svg)
+
 MailDeaf provides an abstract mail service.
 
 ## MailSender
