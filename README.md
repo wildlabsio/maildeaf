@@ -10,6 +10,9 @@ The following MailSender are implemented right now.
 ### **SendGridMailSender**
 https://github.com/wildlabsio/maildeaf/tree/master/maildeaf-sender-sendgrid
 
+### **SpringJavaMailSender**
+https://github.com/wildlabsio/maildeaf/tree/master/maildeaf-sender-springmail
+
 ### **ChainMailSender**
 ChainMailSender have a list of other MailSender.
 
