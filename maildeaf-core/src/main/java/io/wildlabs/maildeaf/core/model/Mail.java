@@ -1,8 +1,9 @@
 package io.wildlabs.maildeaf.core.model;
 
 public class Mail {
-    private final String from;
-    private final String to;
+    private final Email from;
+    private final Email to;
+    private final Email replyTo;
     private final String subject;
     private final String plainText;
     private final String htmlText;
@@ -10,6 +11,7 @@ public class Mail {
     private Mail(Builder builder) {
         from = builder.from;
         to = builder.to;
+        replyTo = builder.replyTo;
         subject = builder.subject;
         plainText = builder.plainText;
         htmlText = builder.htmlText;
@@ -19,12 +21,16 @@ public class Mail {
         return new Builder();
     }
 
-    public String getFrom() {
+    public Email getFrom() {
         return from;
     }
 
-    public String getTo() {
+    public Email getTo() {
         return to;
+    }
+
+    public Email getReplyTo() {
+        return replyTo;
     }
 
     public String getSubject() {
@@ -40,8 +46,9 @@ public class Mail {
     }
 
     public static final class Builder {
-        private String from;
-        private String to;
+        private Email from;
+        private Email to;
+        private Email replyTo;
         private String subject;
         private String plainText;
         private String htmlText;
@@ -49,13 +56,18 @@ public class Mail {
         private Builder() {
         }
 
-        public Builder from(String val) {
+        public Builder from(Email val) {
             from = val;
             return this;
         }
 
-        public Builder to(String val) {
+        public Builder to(Email val) {
             to = val;
+            return this;
+        }
+
+        public Builder replyTo(Email val) {
+            replyTo = val;
             return this;
         }
 

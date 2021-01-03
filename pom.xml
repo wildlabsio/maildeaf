@@ -12,6 +12,7 @@
     <modules>
         <module>maildeaf-core</module>
         <module>maildeaf-sender-sendgrid</module>
+        <module>maildeaf-sender-springmail</module>
     </modules>
 
     <scm>
@@ -30,6 +31,8 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
         <sendgrid-java.version>4.0.1</sendgrid-java.version>
+        <spring-context-support.version>5.2.8.RELEASE</spring-context-support.version>
+        <mail.version>1.4.7</mail.version>
     </properties>
 
     <dependencyManagement>

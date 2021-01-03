@@ -1,13 +1,14 @@
 package io.wildlabs.maildeaf.core.sender;
 
 import io.wildlabs.maildeaf.core.exception.sender.MailSenderException;
+import io.wildlabs.maildeaf.core.model.Email;
 import io.wildlabs.maildeaf.core.model.Mail;
 
 public class ProxyMailSender implements MailSender {
     private final MailSender mailSender;
-    private final String to;
+    private final Email to;
 
-    public ProxyMailSender(MailSender mailSender, String to) {
+    public ProxyMailSender(MailSender mailSender, Email to) {
         this.mailSender = mailSender;
         this.to = to;
     }

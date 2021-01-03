@@ -22,7 +22,13 @@ public class SendGridMailSender implements MailSender {
                     new Content("text/plain", mail.getPlainText())
             );
 
-            sendGridMail.addContent(new Content("text/html", mail.getHtmlText()));
+            if (mail.getHtmlText() != null) {
+                sendGridMail.addContent(new Content("text/html", mail.getHtmlText()));
+            }
+
+            if (mail.getReplyTo() != null) {
+                sendGridMail.setReplyTo(convertEmail(mail.getReplyTo()));
+            }
 
             Request request = new Request();
             request.setMethod(Method.POST);
@@ -35,7 +41,7 @@ public class SendGridMailSender implements MailSender {
         }
     }
 
-    private Email convertEmail(String email) {
-        return new Email(email);
+    private Email convertEmail(io.wildlabs.maildeaf.core.model.Email email) {
+        return new Email(email.getEmail(), email.getName());
     }
 }
