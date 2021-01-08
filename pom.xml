@@ -30,9 +30,10 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
-        <sendgrid-java.version>4.0.1</sendgrid-java.version>
+        <sendgrid-java.version>4.7.1</sendgrid-java.version>
         <spring-context-support.version>5.2.8.RELEASE</spring-context-support.version>
         <mail.version>1.4.7</mail.version>
+        <java-http-client.version>4.1.0</java-http-client.version>
     </properties>
 
     <dependencyManagement>

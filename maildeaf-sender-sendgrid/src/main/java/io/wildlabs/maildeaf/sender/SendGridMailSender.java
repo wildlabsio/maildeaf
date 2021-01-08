@@ -1,6 +1,10 @@
 package io.wildlabs.maildeaf.sender;
 
-import com.sendgrid.*;
+import com.sendgrid.Method;
+import com.sendgrid.Request;
+import com.sendgrid.SendGrid;
+import com.sendgrid.helpers.mail.objects.Content;
+import com.sendgrid.helpers.mail.objects.Email;
 import io.wildlabs.maildeaf.core.exception.sender.MailSenderException;
 import io.wildlabs.maildeaf.core.model.Mail;
 import io.wildlabs.maildeaf.core.sender.MailSender;
@@ -15,7 +19,7 @@ public class SendGridMailSender implements MailSender {
     @Override
     public void sendMail(Mail mail) throws MailSenderException {
         try {
-            com.sendgrid.Mail sendGridMail = new com.sendgrid.Mail(
+            com.sendgrid.helpers.mail.Mail sendGridMail = new com.sendgrid.helpers.mail.Mail(
                     convertEmail(mail.getFrom()),
                     mail.getSubject(),
                     convertEmail(mail.getTo()),
